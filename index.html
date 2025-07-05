@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📋 To-Do List</h1>
+            <div class="quote" id="quote">"Loading Quote..."</div>
+            <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+        </header>
+
+        <section class="add-task">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="prioritySelect">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+            <select id="categorySelect">
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Health">Health</option>
+            </select>
+            <input type="date" id="dueDateInput">
+            <button id="addTaskBtn">Add Task</button>
+        </section>
+
+        <section class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <select id="filterCategory">
+                <option value="All">All Categories</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Health">Health</option>
+            </select>
+            <select id="filterPriority">
+                <option value="All">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </section>
+
+        <section class="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill">0%</div>
+            </div>
+        </section>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <section class="targets">
+            <h2>🎯 Weekly Target: <span id="weeklyTarget">0</span> Tasks</h2>
+            <h2>🎯 Monthly Target: <span id="monthlyTarget">0</span> Tasks</h2>
+        </section>
+
+        <section class="streak">
+            <h2>🔥 Task Streak: <span id="streakCounter">0</span> Tasks Today</h2>
+        </section>
+
+        <section class="recent-activity">
+            <h2>🕑 Recent Activity</h2>
+            <ul id="recentList"></ul>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
